@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informes - Gestor de Historias de Usuario</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Informes</h1>
+    </header>
+
+    <div class="container">
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="sprints.html">Sprints</a>
+            <a href="historias.html">Historias de Usuario</a>
+        </nav>
+
+        <section>
+            <h2>Informe General</h2>
+            <div id="informeGeneral">
+                <p>Cargando informe...</p>
+            </div>
+
+            <h2 style="margin-top: 30px;">Informe por Sprint</h2>
+            <div>
+                <label for="sprintInforme">Seleccionar sprint:</label>
+                <select id="sprintInforme"></select>
+            </div>
+            <div id="informeSprint">
+                <p>Seleccione un sprint para ver su avance.</p>
+            </div>
+
+            <h2 style="margin-top: 30px;">Historias por Responsable</h2>
+            <div>
+                <label for="responsableInforme">Responsable:</label>
+                <input type="text" id="responsableInforme" placeholder="Nombre del responsable">
+                <button id="buscarResponsableBtn">Buscar</button>
+            </div>
+            <div id="informeResponsable">
+                <p>Ingrese un responsable y presione Buscar.</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/informes.js"></script>
+</body>
+</html>

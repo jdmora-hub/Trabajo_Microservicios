@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprints - Gestor de Historias de Usuario</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Sprints</h1>
+    </header>
+
+    <div class="container">
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="historias.html">Historias de Usuario</a>
+            <a href="informes.html">Informes</a>
+        </nav>
+
+        <section>
+            <h2>Lista de Sprints</h2>
+            <table id="sprintsTb">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nombre</th>
+                        <th>Fecha Inicio</th>
+                        <th>Fecha Fin</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td colspan="5">No hay sprints...</td></tr>
+                </tbody>
+            </table>
+
+            <button id="nuevoSprintBtn">Nuevo Sprint</button>
+
+            <form name="sprintForm" style="display:none;" id="sprintForm">
+                <h3>Registrar Sprint</h3>
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre" required>
+                </div>
+                <div>
+                    <label for="fecha_inicio">Fecha Inicio:</label>
+                    <input type="date" name="fecha_inicio" id="fecha_inicio" required>
+                </div>
+                <div>
+                    <label for="fecha_fin">Fecha Fin:</label>
+                    <input type="date" name="fecha_fin" id="fecha_fin" required>
+                </div>
+                <div>
+                    <button type="reset" class="secondary">Cancelar</button>
+                    <button type="submit">Guardar</button>
+                </div>
+            </form>
+
+            <div id="msg" class="msg"></div>
+        </section>
+    </div>
+
+    <script src="js/sprints.js"></script>
+</body>
+</html>
