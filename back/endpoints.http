@@ -1,0 +1,93 @@
+### Prueba de endpoints
+
+### Sprints ms
+
+### prueba inicio
+GET http://127.0.0.1:8001/inicio
+
+### consultar todos los sprints
+GET http://127.0.0.1:8001/sprints
+
+### crear sprint
+POST http://127.0.0.1:8001/sprints
+Content-Type: application/json
+
+{
+    "nombre": "Sprint 1",
+    "fecha_inicio": "2026-11-20",
+    "fecha_fin": "2026-12-04"
+}
+
+### consultar sprint por id
+GET http://127.0.0.1:8001/sprints/1
+
+### modificar sprint
+PUT http://127.0.0.1:8001/sprints/1
+Content-Type: application/json
+
+{
+    "nombre": "Sprint 1 actualizado",
+    "fecha_inicio": "2026-11-20",
+    "fecha_fin": "2026-12-06"
+}
+
+### eliminar sprint
+DELETE http://127.0.0.1:8001/sprints/1
+
+### Historias ms
+
+### prueba inicio
+GET http://127.0.0.1:8002/inicio
+
+### consultar todas las historias
+GET http://127.0.0.1:8002/historias
+
+### crear historia
+POST http://127.0.0.1:8002/historias
+Content-Type: application/json
+
+{
+    "titulo": "Consultar los sprints",
+    "descripcion": "Como usuario quiero consultar los sprints para organizar mis historias.",
+    "responsable": "Ana",
+    "estado": "nueva",
+    "puntos": 3,
+    "fecha_creacion": "2026-11-20",
+    "fecha_finalizacion": null,
+    "sprint_id": 1
+}
+
+### consultar historia por id
+GET http://127.0.0.1:8002/historias/1
+
+### consultar historias de un sprint
+GET http://127.0.0.1:8002/historias/sprint/1
+
+### modificar historia
+PUT http://127.0.0.1:8002/historias/1
+Content-Type: application/json
+
+{
+    "titulo": "Consultar los sprints",
+    "descripcion": "Como usuario quiero consultar los sprints para organizar mis historias.",
+    "responsable": "Ana",
+    "estado": "finalizada",
+    "puntos": 3,
+    "fecha_creacion": "2026-11-20",
+    "fecha_finalizacion": "2026-11-21",
+    "sprint_id": 1
+}
+
+### eliminar historia
+DELETE http://127.0.0.1:8002/historias/1
+
+### Informes
+
+### consultar informe general
+GET http://127.0.0.1:8002/informes/general
+
+### consultar informe por sprint
+GET http://127.0.0.1:8002/informes/sprint/1
+
+### consultar historias por responsable
+GET http://127.0.0.1:8002/informes/responsable/Ana
